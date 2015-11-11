@@ -29,6 +29,5 @@ RUN apt-get install -y supervisor
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN echo "Europe/Madrid" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
 RUN export LANGUAGE=en_US.UTF-8; export LANG=en_US.UTF-8; export LC_ALL=en_US.UTF-8; locale-gen en_US.UTF-8; DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
-ADD resolv.conf /etc/
 ADD diamond.conf /etc/diamond/
 ENTRYPOINT ["/usr/bin/supervisord"]
