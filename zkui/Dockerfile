@@ -7,5 +7,6 @@ WORKDIR /zkui/target/
 COPY config.cfg /zkui/target/
 COPY entrypoint.sh /zkui/target/
 RUN chmod +x entrypoint.sh
-ENTRYPOINT ["/zkui/target/entrypoint.sh"]
 EXPOSE 9090
+ENTRYPOINT ["./entrypoint.sh"]
+CMD ["/usr/bin/java", "-jar", "/zkui/target/zkui-2.0-SNAPSHOT-jar-with-dependencies.jar"]
