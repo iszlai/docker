@@ -1,5 +1,5 @@
 FROM java:7
-MAINTAINER Miguel Auso <miguel.auso@odigeo.com> https://github.com/maauso/docker.git
+MAINTAINER Miguel Auso <m.auso.p@gmail.com> https://github.com/maauso/docker.git
 RUN apt-get update && apt-get install -y git maven
 RUN git clone https://github.com/DeemOpen/zkui.git
 RUN cd /zkui && mvn clean install
