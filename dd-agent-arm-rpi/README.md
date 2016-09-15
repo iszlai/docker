@@ -13,7 +13,9 @@ This image doesn't has all configuration that you can find in official images, b
 [Entryponit with options](https://github.com/maauso/docker/blob/master/dd-agent-arm-rpi/entrypoint.sh)
 
 ```DD_HOSTNAME```=  set the hostname (write it in datadog.conf)
+
 ```TAGS``` set host tags. Add -e TAGS="simple-tag-0,tag-key-1:tag-value-1" to use [simple-tag-0, tag-key-1:tag-value-1] as host tags.
+
 ```LOG_LEVEL``` set logging verbosity (CRITICAL, ERROR, WARNING, INFO, DEBUG). Add -e LOG_LEVEL=DEBUG to turn logs to debug mode.
 
 ## Build Details
