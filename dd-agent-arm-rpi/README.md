@@ -21,7 +21,10 @@ This image doesn't has all configuration that you can find in official images, b
 ## Build Details
 
 [Source Repository](https://github.com/maauso/docker)
+
 [Source Proyect](https://github.com/maauso/docker)
+
 [DockerFile](https://github.com/maauso/docker/blob/master/dd-agent-arm-rpi/Dockerfile)
+
 [DockerHub](https://hub.docker.com/r/maauso/dd-agent-arm-rpi/)
 
