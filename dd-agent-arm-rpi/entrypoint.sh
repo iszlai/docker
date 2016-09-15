@@ -50,4 +50,8 @@ find /conf.d -name '*.yaml' -exec cp {} ~/.datadog-agent/agent/conf.d \;
 
 export PATH="/opt/datadog-agent/embedded/bin:/opt/datadog-agent/bin:$PATH"
 
-exec "$@"
+if [[ $DOGSTATSD_ONLY ]]; then
+		PYTHONPATH=/opt/datadog-agent/agent /opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/dogstatsd.py
+else
+		exec "$@"
+fi
